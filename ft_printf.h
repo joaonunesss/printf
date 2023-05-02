@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 17:34:17 by jmarinho          #+#    #+#             */
-/*   Updated: 2023/05/02 12:54:41 by jmarinho         ###   ########.fr       */
+/*   Created: 2023/04/27 11:59:53 by jmarinho          #+#    #+#             */
+/*   Updated: 2023/05/02 13:21:25 by jmarinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_print_int(int nbr)
-{
-	int		return_value;
-	char	*ch;
+# include <unistd.h>
+# include <stdarg.h>
+# include "libft.h"
 
-	return_value = 0;
-	ch = ft_itoa(nbr);
-	return_value = ft_print_string(ch);
-	free(ch);
-	return (return_value);
-}
+int	ft_printf(const char *format, ...);
+int	ft_print_int(int nbr);
+int	ft_print_char(int s);
+int	ft_print_string(char	*s);
+int	ft_print_pointer(unsigned long long p);
+int	ft_print_unint(unsigned int nbr);
+int	ft_print_hexa(unsigned int num, char c);
+int	ft_print_percent(void);
+#endif

@@ -6,13 +6,13 @@
 /*   By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:43:54 by jmarinho          #+#    #+#             */
-/*   Updated: 2023/04/28 16:04:23 by jmarinho         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:55:42 by jmarinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	len(long n)
+int	ft_unitoa_len(long n)
 {
 	int	size;
 
@@ -48,7 +48,7 @@ char	*ft_unitoa(unsigned int n)
 	int		i;
 
 	number = n;
-	i = len(number);
+	i = ft_unitoa_len(number);
 	if (number == 0)
 		i++;
 	str = (char *)malloc(sizeof(char) * (i + 1));
@@ -71,6 +71,7 @@ int	ft_print_unint(unsigned int nbr)
 
 	return_value = 0;
 	ch = ft_unitoa(nbr);
-	return_value = ft_print_char(ch);
+	return_value = ft_print_string(ch);
+	free(ch);
 	return (return_value);
 }

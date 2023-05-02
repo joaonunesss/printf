@@ -6,11 +6,12 @@
 #    By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 11:54:52 by jmarinho          #+#    #+#              #
-#    Updated: 2023/04/28 15:57:33 by jmarinho         ###   ########.fr        #
+#    Updated: 2023/05/02 13:17:27 by jmarinho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_printf.c ft_print_char.c ft_print_char.c ft_print_hexa.c ft_print_pointer.c ft_print_unint.c \
+SRC = ft_printf.c ft_print_char.c ft_print_hexa.c ft_print_pointer.c \
+	ft_print_int.c ft_print_unint.c ft_print_string.c ft_print_percent.c \
 
 NAME = libftprintf.a
 
@@ -38,8 +39,9 @@ fclean: clean
 	@${RM} ${NAME}
 	@make fclean -C libft
 run: all
-	cc ${FLAGS} *.c
+	cc ${FLAGS} *.c $(NAME)
 	./a.out
+
 re: fclean all
 
 .PHONY: all clean fclean re
