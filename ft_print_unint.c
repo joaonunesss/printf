@@ -6,7 +6,7 @@
 /*   By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:43:54 by jmarinho          #+#    #+#             */
-/*   Updated: 2023/05/02 12:55:42 by jmarinho         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:17:18 by jmarinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ int	ft_unitoa_len(long n)
 	int	size;
 
 	size = 0;
-	if (n < 0)
-	{
-		n = n * -1;
-		size++;
-	}
 	while (n > 0)
 	{
 		n = n / 10;
@@ -60,8 +55,7 @@ char	*ft_unitoa(unsigned int n)
 		str[0] = 48;
 		return (str);
 	}
-	str = ft_unitoa_aux(str, number, i);
-	return (str);
+	return (ft_unitoa_aux(str, number, i));
 }
 
 int	ft_print_unint(unsigned int nbr)

@@ -6,7 +6,7 @@
 #    By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 11:54:52 by jmarinho          #+#    #+#              #
-#    Updated: 2023/05/02 13:17:27 by jmarinho         ###   ########.fr        #
+#    Updated: 2023/05/02 15:18:46 by jmarinho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,9 +38,6 @@ clean:
 fclean: clean
 	@${RM} ${NAME}
 	@make fclean -C libft
-run: all
-	cc ${FLAGS} *.c $(NAME)
-	./a.out
 
 re: fclean all
 
