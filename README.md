@@ -1,7 +1,7 @@
 # printf
 
-My take on ft_printf project of 42 school
+My take on ft_printf project for 42 school
 
-You must add libft folder in order to work properly
-
-100%/100%
+| Projects      | Solutions  |
+| :--------------:| :----------:|
+| ft_printf | [100%]|
