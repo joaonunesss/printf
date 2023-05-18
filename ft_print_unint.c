@@ -6,7 +6,7 @@
 /*   By: jmarinho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:43:54 by jmarinho          #+#    #+#             */
-/*   Updated: 2023/05/03 12:15:16 by jmarinho         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:06:36 by jmarinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_unitoa(unsigned int n)
 		i++;
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == 0)
-		return (NULL);
+		return (0);
 	str[i--] = '\0';
 	if (number == 0)
 	{
@@ -66,7 +66,7 @@ int	ft_print_unint(unsigned int nbr)
 	return_value = 0;
 	ch = ft_unitoa(nbr);
 	if (ch == 0)
-		return (NULL);
+		return (0);
 	return_value = ft_print_string(ch);
 	free(ch);
 	return (return_value);
